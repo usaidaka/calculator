@@ -50,18 +50,15 @@ document.getElementById("dot").addEventListener("click", () => {
 
 document.querySelectorAll(".amt").forEach((element) => {
   element.addEventListener("click", () => {
-    if (element.innerText === "x") {
-      element.innerText = "*";
-    }
     if (input.innerText) {
       if (tmp.innerText) {
-        tmp.innerText = `${tmp.innerText} ${input.innerText} ${element.innerText}`;
+        tmp.innerText = `${tmp.innerText} ${input.innerText} ${element.value}`;
       } else {
-        tmp.innerText = `${input.innerText} ${element.innerText}`;
+        tmp.innerText = `${input.innerText} ${element.value}`;
       }
     } else if (tmp.innerText.slice(-1).match(/-|\+|\*|\//)) {
       let string = tmp.innerText.slice(0, -1);
-      string += element.innerText;
+      string += element.value;
 
       tmp.innerText = string;
     }
