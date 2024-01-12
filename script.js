@@ -21,8 +21,8 @@ document.getElementById("clear").addEventListener("click", () => {
 document.querySelectorAll(".number").forEach((element) => {
   element.addEventListener("click", () => {
     if (input.innerText.length > 15) return alert("maksimal angka 15");
-    let isZero = false;
 
+    let isZero = false;
     if (input.innerText[0] === "0" && input.innerText[1] === undefined) {
       isZero = true;
     }
@@ -45,7 +45,11 @@ document.querySelectorAll(".number").forEach((element) => {
 
 document.getElementById("dot").addEventListener("click", () => {
   if (input.innerText.includes(".")) return;
-  input.innerText += ".";
+  if (input.innerText[0] === undefined) {
+    input.innerText += "0.";
+  } else {
+    input.innerText += ".";
+  }
 });
 
 document.querySelectorAll(".amt").forEach((element) => {
