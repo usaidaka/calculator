@@ -5,14 +5,14 @@ const empty = (element) => {
   element.innerText = "";
 };
 
-const del = (input) => {
-  input.innerText = input.innerText.substring(0, input.innerText.length - 1);
-};
-
 document.getElementById("all-clear").addEventListener("click", () => {
   empty(input);
   empty(tmp);
 });
+
+const del = (input) => {
+  input.innerText = input.innerText.substring(0, input.innerText.length - 1);
+};
 
 document.getElementById("clear").addEventListener("click", () => {
   del(input);
@@ -20,8 +20,8 @@ document.getElementById("clear").addEventListener("click", () => {
 
 document.querySelectorAll(".number").forEach((element) => {
   element.addEventListener("click", () => {
-    if (input.innerText.length > 15)
-      return alert("Rentang masukan maksimum terlampaui!");
+    if (input.innerText.length > 19)
+      return alert("최대 입력 범위를 초과했습니다!");
 
     input.innerText += element.innerText;
   });
@@ -35,6 +35,9 @@ document.getElementById("dot").addEventListener("click", () => {
 
 document.querySelectorAll(".amt").forEach((element) => {
   element.addEventListener("click", () => {
+    if (element.innerText === "x") {
+      element.innerText = "*";
+    }
     if (input.innerText) {
       if (tmp.innerText) {
         tmp.innerText = `${tmp.innerText} ${input.innerText} ${element.innerText}`;
