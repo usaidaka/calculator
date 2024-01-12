@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;0,800;0,900;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700;800;900&display=swap");
+/* STYLE DIRECTORY */
+
+*,
+*::before {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  transition: all;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: white;
+  transition: all;
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #3b4664;
+}
+
+/* HEAD */
+
+.head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.head .theme-wrapper {
+  display: flex;
+  gap: 30px;
+  align-items: start;
+}
+
+.head .theme-wrapper .theme .theme-type {
+  display: flex;
+  gap: 10px;
+  height: 40px;
+  margin-left: 3px;
+  justify-content: start;
+}
+
+/* TOGGLE */
+.toggle-container {
+  display: flex;
+  align-items: center;
+  height: 15px;
+  width: 50px;
+  padding: 5px;
+  overflow: hidden;
+  background: #181f32;
+  border-radius: 25px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5), inset 0 0 5px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+input {
+  display: none;
+}
+
+label {
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.round {
+  position: absolute;
+  margin-top: 2.5px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 10px;
+  width: 10px;
+  background: #d63c34;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.checkbox1:checked ~ .round {
+  transform: translateX(0);
+}
+
+.checkbox2:checked ~ .round {
+  transform: translateX(20px);
+}
+
+.checkbox3:checked ~ .round {
+  transform: translateX(40px);
+}
+/* calculator */
+
+#calculator {
+  width: 400px;
+  padding: 25px;
+  border-radius: 25px;
+  background: #3b4664;
+}
+
+/* input */
+#input-wrap {
+  margin-top: 20px;
+  position: relative;
+  width: calc(100% - 4px);
+  margin-bottom: 5px;
+  padding: 0 5px;
+  background: #181f32;
+  text-align: right;
+  box-shadow: inset 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+  border-radius: 6px;
+}
+
+#input {
+  height: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  font-family: "League Spartan", sans-serif;
+}
+
+#tmp {
+  position: absolute;
+  right: 5px;
+  top: 0.25rem;
+  color: grey;
+  font-family: "League Spartan", sans-serif;
+}
+
+/* button */
+.button-container {
+  background-color: #252c46;
+  padding: 10px;
+  border-radius: 16px;
+}
+
+#button-wrap {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  border-radius: 6px;
+}
+
+#button-wrap > button {
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  /* line-height: 5rem; */
+  margin: 2px 0;
+  background: grey;
+  color: #f1f1f1;
+  border-radius: 4px;
+  cursor: pointer;
+  user-select: none;
+  outline: 0;
+  transition: 0.3s;
+  border-radius: 10px;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+#button-wrap > button#all-clear,
+button#result {
+  width: calc(48% - 4px);
+  font-style: normal;
+}
+
+#button-wrap > button.number {
+  background: #eae3dc;
+  color: #41454d;
+  box-shadow: inset 0px -6px #afa69c;
+}
+
+#button-wrap button.amt,
+button#dot {
+  background: #eae3dc;
+  color: #41454d;
+  box-shadow: inset 0px -6px #afa69c;
+}
+#button-wrap > button#clear,
+button#all-clear {
+  background: #647299;
+  color: white;
+  font-style: normal;
+  box-shadow: inset 0px -6px #404d75;
+}
+
+#button-wrap > button#result {
+  background: #d13f30;
+  color: white;
+  box-shadow: inset 0px -6px #842d27;
+}
+
+#button-wrap > button:hover {
+  box-shadow: inset 0px 0px 15px 0px rgba(0, 0, 0, 0.3);
+}
+
+#button-wrap > button#result {
+  background: #f55530;
+}
+
+@media only screen and (min-width: 768px) {
+  #calculator {
+    width: 600px;
+  }
+
+  #button-wrap > button {
+    width: 120px;
+  }
+
+  #button-wrap > button#all-clear,
+  button#result {
+    width: calc(48% - 4px);
+    font-style: normal;
+  }
+}
