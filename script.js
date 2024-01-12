@@ -123,6 +123,7 @@ function toggleTheme1() {
   const changeDot = document.getElementById("dot");
   changeDot.style.background = "#eae3dc";
   changeDot.style.boxShadow = "inset 0px -6px #afa69c";
+  changeDot.style.color = "#252c46";
 
   // change button color
   const changeButton = document.querySelectorAll(".number");
@@ -181,6 +182,7 @@ function toggleTheme2() {
   const changeDot = document.getElementById("dot");
   changeDot.style.background = "#E5E4E0";
   changeDot.style.boxShadow = "inset 0px -6px #afa69c";
+  changeDot.style.color = "#252c46";
 
   // change button color
   const changeButton = document.querySelectorAll(".number");
