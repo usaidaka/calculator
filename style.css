@@ -6,7 +6,6 @@
 *::before {
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
-  transition: all;
 }
 
 html,
@@ -16,7 +15,6 @@ body {
   margin: 0;
   padding: 0;
   color: white;
-  transition: all;
 }
 
 body {
@@ -84,11 +82,10 @@ label {
   width: 10px;
   background: #d63c34;
   border-radius: 50%;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 
 .checkbox1:checked ~ .round {
-  transform: translateX(0);
 }
 
 .checkbox2:checked ~ .round {

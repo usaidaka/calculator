@@ -21,14 +21,29 @@ document.getElementById("clear").addEventListener("click", () => {
 document.querySelectorAll(".number").forEach((element) => {
   element.addEventListener("click", () => {
     if (input.innerText.length > 15) return alert("maksimal angka 15");
+    let isZero = false;
 
-    input.innerText += element.innerText;
+    if (input.innerText[0] === "0" && input.innerText[1] === undefined) {
+      isZero = true;
+    }
+
+    if (isZero) {
+      if (element.innerText !== "0" && input.innerText[0] !== undefined) {
+        if (input.innerText[0] === "0" && !input.innerText.includes(".")) {
+          input.innerText = input.innerText.substring(
+            0,
+            input.innerText.length - 1
+          );
+        }
+      }
+    } else {
+      input.innerText += element.innerText;
+    }
   });
 });
 
 document.getElementById("dot").addEventListener("click", () => {
   if (input.innerText.includes(".")) return;
-
   input.innerText += ".";
 });
 
@@ -100,6 +115,11 @@ function toggleTheme1() {
   changeAmt.forEach((x) => (x.style.color = "#302F26"));
   changeAmt.forEach((x) => (x.style.boxShadow = "inset 0px -6px #afa69c"));
 
+  // change dot
+  const changeDot = document.getElementById("dot");
+  changeDot.style.background = "#eae3dc";
+  changeDot.style.boxShadow = "inset 0px -6px #afa69c";
+
   // change button color
   const changeButton = document.querySelectorAll(".number");
   changeButton.forEach((x) => (x.style.background = "#eae3dc"));
@@ -144,11 +164,17 @@ function toggleTheme2() {
   changeResult.style.background = "#C85401";
   changeResult.style.color = "white";
   changeResult.style.boxShadow = "inset 0px -6px #842d27";
+
   // plus , min, divide, times
   const changeAmt = document.querySelectorAll(".amt");
   changeAmt.forEach((x) => (x.style.background = "#E5E4E0"));
   changeAmt.forEach((x) => (x.style.color = "#302F26"));
   changeAmt.forEach((x) => (x.style.boxShadow = "inset 0px -6px #afa69c"));
+
+  // change dot
+  const changeDot = document.getElementById("dot");
+  changeDot.style.background = "#E5E4E0";
+  changeDot.style.boxShadow = "inset 0px -6px #afa69c";
 
   // change button color
   const changeButton = document.querySelectorAll(".number");
@@ -194,11 +220,18 @@ function toggleTheme3() {
   changeResult.style.background = "#00DECF";
   changeResult.style.color = "#003D41";
   changeResult.style.boxShadow = "inset 0px -6px #6ae2dd";
+
   // plus , min, divide, times
   const changeAmt = document.querySelectorAll(".amt");
   changeAmt.forEach((x) => (x.style.background = "#331B4D"));
   changeAmt.forEach((x) => (x.style.color = "#F1D971"));
   changeAmt.forEach((x) => (x.style.boxShadow = "inset 0px -6px #7b2491"));
+
+  // change dot
+  const changeDot = document.getElementById("dot");
+  changeDot.style.background = "#331B4D";
+  changeDot.style.boxShadow = "inset 0px -6px #7b2491";
+  changeDot.style.color = "#F1D971";
 
   // change button color
   const changeButton = document.querySelectorAll(".number");
