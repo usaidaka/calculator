@@ -86,6 +86,7 @@ label {
 }
 
 .checkbox1:checked ~ .round {
+  transform: translateX(0);
 }
 
 .checkbox2:checked ~ .round {
