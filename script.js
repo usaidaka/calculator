@@ -52,7 +52,7 @@ document.getElementById("dot").addEventListener("click", () => {
   }
 });
 
-document.querySelectorAll(".amt").forEach((element) => {
+document.querySelectorAll(".operation").forEach((element) => {
   element.addEventListener("click", () => {
     if (input.innerText) {
       if (tmp.innerText) {
@@ -112,10 +112,12 @@ function toggleTheme1() {
   changeResult.style.color = "white";
   changeResult.style.boxShadow = "inset 0px -6px #842d27";
   // plus, min, divide, times
-  const changeAmt = document.querySelectorAll(".amt");
-  changeAmt.forEach((x) => (x.style.background = "#eae3dc"));
-  changeAmt.forEach((x) => (x.style.color = "#302F26"));
-  changeAmt.forEach((x) => (x.style.boxShadow = "inset 0px -6px #afa69c"));
+  const changeoperation = document.querySelectorAll(".operation");
+  changeoperation.forEach((x) => (x.style.background = "#eae3dc"));
+  changeoperation.forEach((x) => (x.style.color = "#302F26"));
+  changeoperation.forEach(
+    (x) => (x.style.boxShadow = "inset 0px -6px #afa69c")
+  );
 
   // change dot
   const changeDot = document.getElementById("dot");
@@ -168,10 +170,12 @@ function toggleTheme2() {
   changeResult.style.boxShadow = "inset 0px -6px #842d27";
 
   // plus , min, divide, times
-  const changeAmt = document.querySelectorAll(".amt");
-  changeAmt.forEach((x) => (x.style.background = "#E5E4E0"));
-  changeAmt.forEach((x) => (x.style.color = "#302F26"));
-  changeAmt.forEach((x) => (x.style.boxShadow = "inset 0px -6px #afa69c"));
+  const changeoperation = document.querySelectorAll(".operation");
+  changeoperation.forEach((x) => (x.style.background = "#E5E4E0"));
+  changeoperation.forEach((x) => (x.style.color = "#302F26"));
+  changeoperation.forEach(
+    (x) => (x.style.boxShadow = "inset 0px -6px #afa69c")
+  );
 
   // change dot
   const changeDot = document.getElementById("dot");
@@ -224,10 +228,12 @@ function toggleTheme3() {
   changeResult.style.boxShadow = "inset 0px -6px #6ae2dd";
 
   // plus , min, divide, times
-  const changeAmt = document.querySelectorAll(".amt");
-  changeAmt.forEach((x) => (x.style.background = "#331B4D"));
-  changeAmt.forEach((x) => (x.style.color = "#F1D971"));
-  changeAmt.forEach((x) => (x.style.boxShadow = "inset 0px -6px #7b2491"));
+  const changeoperation = document.querySelectorAll(".operation");
+  changeoperation.forEach((x) => (x.style.background = "#331B4D"));
+  changeoperation.forEach((x) => (x.style.color = "#F1D971"));
+  changeoperation.forEach(
+    (x) => (x.style.boxShadow = "inset 0px -6px #7b2491")
+  );
 
   // change dot
   const changeDot = document.getElementById("dot");

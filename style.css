@@ -179,7 +179,7 @@ button#result {
   box-shadow: inset 0px -6px #afa69c;
 }
 
-#button-wrap button.amt,
+#button-wrap button.operation,
 button#dot {
   background: #eae3dc;
   color: #41454d;
