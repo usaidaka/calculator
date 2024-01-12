@@ -28,12 +28,13 @@ document.querySelectorAll(".number").forEach((element) => {
     }
 
     if (isZero) {
-      if (element.innerText !== "0" && input.innerText[0] !== undefined) {
+      if (element.innerText !== "0") {
         if (input.innerText[0] === "0" && !input.innerText.includes(".")) {
           input.innerText = input.innerText.substring(
             0,
             input.innerText.length - 1
           );
+          input.innerText += element.innerText;
         }
       }
     } else {
